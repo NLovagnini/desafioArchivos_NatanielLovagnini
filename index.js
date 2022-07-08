@@ -38,17 +38,16 @@ const addNewProd = () =>{
         price: 456.78,
     }
     const firstId = allProductsArr[allProductsArr.length-1].id+1
- 
+    
+    //Gracias a este if, podemos asegurarnos de que los ID de los productos no se repitan y sean siempre crecientes.
     if(firstId < lastId){
         newObj.id = lastId
     } else {
         newObj.id = firstId
     }
-    
     lastId = newObj.id
     
     allProductsArr.push(newObj)
-
     container.write(file, allProductsArr)
 }
 
@@ -65,6 +64,6 @@ const deleteAll = () =>{
 // let prodById = getProdById(2)
 // console.log(allProducts);
 // console.log(prodById);
-addNewProd()
+// addNewProd()
 // deleteAll()
 // delProdById(2)
