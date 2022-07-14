@@ -20,6 +20,7 @@ module.exports = class Container {
         }catch(err){
         console.log(err)
         }
+    }
 
     save = async (file, newObj) =>{
         try{
@@ -45,6 +46,4 @@ module.exports = class Container {
             console.log(err)
         }
     }
-}
-
 }
